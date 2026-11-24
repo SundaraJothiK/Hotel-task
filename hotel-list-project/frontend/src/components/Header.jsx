@@ -1,0 +1,2 @@
+import { Link, NavLink } from 'react-router-dom';
+export default function Header(){ return <header className="topbar"><Link to="/" className="brand"><span className="brand-mark">S</span><span>stay<span className="brand-accent">finder</span><small>HOTEL COLLECTION</small></span></Link><nav><NavLink to="/" end>Explore stays</NavLink><a href="mailto:hello@stayfinder.example">Contact</a></nav><Link to="/add" className="button button-light">+ Add hotel</Link></header>; }

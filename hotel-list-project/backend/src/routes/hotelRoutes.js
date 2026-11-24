@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { createHotel, deleteHotel, getHotel, getHotels, updateHotel } from '../controllers/hotelController.js';
+import { upload } from '../middleware/upload.js';
+const router = Router();
+router.get('/', getHotels);
+router.get('/:id', getHotel);
+router.post('/', upload.single('image'), createHotel);
+router.put('/:id', upload.single('image'), updateHotel);
+router.delete('/:id', deleteHotel);
+export default router;

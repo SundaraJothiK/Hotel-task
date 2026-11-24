@@ -1,0 +1,1 @@
+export default function Pagination({page,total,limit,onChange}){const pages=Math.ceil(total/limit);if(pages<=1)return null;return <div className="pagination"><button disabled={page===1} onClick={()=>onChange(page-1)}>← Previous</button><span>Page <b>{page}</b> of {pages}</span><button disabled={page===pages} onClick={()=>onChange(page+1)}>Next →</button></div>}
